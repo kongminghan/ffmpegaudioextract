@@ -30,12 +30,7 @@ function Index() {
   };
 
   useEffect(() => {
-    if (isMobile) {
-      setReady(true);
-      return;
-    } else {
-      load().catch((er) => console.log(er));
-    }
+   load().catch((er) => console.log(er));
   }, []);
 
   const convertToMp3 = async (video: FileWithPath) => {
